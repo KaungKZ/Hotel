@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display:400,700|Poppins:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+}
+
+.header .menu-bar {
+  font-family: "Playfair Display", serif;
+  width: 80%;
+  height: 75px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .menu-bar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  position: relative;
+}
+
+.header .menu-bar a::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -10%;
+  width: 120%;
+  margin: auto;
+  height: 40%;
+  background: none;
+  z-index: -1;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.header .menu-bar a:hover:after {
+  content: "";
+  top: 0%;
+  height: 100%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  background: #b69100;
+}
+
+.header .menu-bar a:hover {
+  color: #fff;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.header .menu-bar .active {
+  position: relative;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.header .menu-bar .active::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -10%;
+  width: 120%;
+  margin: auto;
+  height: 40%;
+  background: #b69100;
+  z-index: -1;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.header .menu-bar .active:hover:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  height: 100%;
+}
+
+.header .menu-bar .active:hover {
+  color: #fff;
+}
+
+.header .menu-bar .logo {
+  margin-top: -7px;
+  font-size: 2rem;
+}
+
+.header-content {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+.header-content .slider {
+  height: 800px;
+  position: relative;
+}
+
+.header-content .slider .slide {
+  position: absolute;
+  height: 800px;
+  opacity: 0;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.header-content .slider .slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+}
+
+.header-content .slider .slide img {
+  width: 100%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-content .slider .slide .text {
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.header-content .slider .slide .text p {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header-content .slider .slide .text p:first-child {
+  font-size: 5rem;
+}
+
+.header-content .slider .slide .text p:last-child {
+  font-size: 2rem;
+}
+
+.header-content .slider .current {
+  opacity: 1;
+}
+
+.header-content .check-in-container {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 90%;
+  height: 90px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  font-family: "Nunito", sans-serif;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.header-content .check-in-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 7px;
+}
+
+.header-content .check-in-container input {
+  border: 1px solid #b69100;
+  outline: none;
+  width: 220px;
+  height: 30px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.header-content .check-in-container input[type="date"]::-webkit-inner-spin-button,
+.header-content .check-in-container input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #b69100;
+}
+
+.header-content .check-in-container .check-in,
+.header-content .check-in-container .check-out,
+.header-content .check-in-container .guest-numbers {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-top: -15px;
+  padding: 0 50px;
+}
+
+.header-content .check-in-container .bookBtn {
+  width: 15%;
+  height: 100%;
+  background: #b69100;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  cursor: pointer;
+}
+
+.header-content .check-in-container .bookBtn .btn {
+  outline: none;
+  border: none;
+  color: white;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header-content .check-in-container .bookBtn:hover {
+  background: #826900;
+}
+
+.welcome {
+  width: 90%;
+  font-family: "Playfair Display", serif;
+  margin: 140px auto 140px auto;
+  height: 800px;
+}
+
+.welcome .container {
+  position: relative;
+}
+
+.welcome .container .text-container {
+  width: 65%;
+  height: 600px;
+  border: 2px solid #b69100;
+  height: auto;
+  padding: 60px;
+}
+
+.welcome .container .text-container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome .container .text-container .title p {
+  color: #b69100;
+}
+
+.welcome .container .text-container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.welcome .container .text-container .title p:last-child {
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.welcome .container .text-container .title p:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.welcome .container .text-container .content {
+  width: 75%;
+  margin: auto;
+  font-family: "Nunito", sans-serif;
+  color: #404040;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.welcome .container .text-container .content p {
+  line-height: 3;
+}
+
+.welcome .container .photo {
+  position: absolute;
+  top: 35%;
+  left: 55.5%;
+}
+
+.welcome .container .photo img {
+  width: 100%;
+  height: auto;
+}
+
+.rooms {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 140px;
+}
+
+.rooms .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+.rooms .container .title p {
+  color: #b69100;
+}
+
+.rooms .container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.rooms .container .title p:last-child {
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.rooms .container .title p:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.rooms .place-holders {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+}
+
+.rooms .place-holders .room {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.rooms .place-holders .room .room-img {
+  width: 100%;
+  height: 100%;
+}
+
+.rooms .place-holders .room .hover {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  z-index: 2;
+  -webkit-transition: opacity 500ms ease-in, -webkit-transform 400ms ease, -webkit-transform 0ms ease-out;
+  transition: opacity 500ms ease-in, -webkit-transform 400ms ease, -webkit-transform 0ms ease-out;
+  transition: opacity 500ms ease-in, transform 400ms ease, transform 0ms ease-out;
+  transition: opacity 500ms ease-in, transform 400ms ease, transform 0ms ease-out, -webkit-transform 400ms ease, -webkit-transform 0ms ease-out;
+  opacity: 0;
+}
+
+.rooms .place-holders .room .hover p:first-child {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.rooms .place-holders .room .hover p:nth-child(2) {
+  font-size: 1.5rem;
+}
+
+.rooms .place-holders .room .hover p:nth-child(2) span {
+  color: #b69100;
+}
+
+.rooms .place-holders .room .hover img {
+  width: 120px;
+}
+
+.rooms .place-holders .room .hover a {
+  width: 110px;
+  text-decoration: none;
+  background: transparent;
+  color: #404040;
+  font-size: 1rem;
+  padding: 7px;
+  text-align: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  border: 1px solid #b69100;
+}
+
+.rooms .place-holders .room .hover a:hover {
+  background: #b69100;
+  color: #fff;
+  border: none;
+}
+
+.rooms .place-holders .room::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 35% 50%);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 35% 50%);
+  z-index: 1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  opacity: 0;
+}
+
+.rooms .place-holders .room:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.rooms .place-holders .room:hover .hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.rooms .view-all-rooms {
+  text-align: center;
+  margin: 60px;
+}
+
+.rooms .view-all-rooms a {
+  width: 110px;
+  text-decoration: none;
+  background: #b69100;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 36px;
+  text-align: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-weight: 700;
+}
+
+.rooms .view-all-rooms a:hover {
+  background: #826900;
+}
+
+.services {
+  width: 80%;
+  margin: auto;
+}
+
+.services .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+.services .container .title p {
+  color: #b69100;
+}
+
+.services .container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.services .container .title p:nth-child(2) {
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.services .container .title p:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.services .container .title .extra-title {
+  font-size: 30px;
+  font-family: "Nunito", sans-serif;
+  color: #404040;
+  margin-bottom: 35px;
+}
+
+.services .container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.services .container .icons svg {
+  background: #efefef;
+  padding: 28px;
+  height: 140px;
+  width: 100%;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.services .container .icons svg:hover {
+  background: #b69100;
+  fill: #fff;
+}
+
+.services .container .service-btn {
+  text-align: center;
+  margin: 60px;
+  font-family: "Nunito", sans-serif;
+}
+
+.services .container .service-btn a {
+  width: 110px;
+  text-decoration: none;
+  background: #b69100;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 36px;
+  text-align: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-weight: 700;
+}
+
+.services .container .service-btn a:hover {
+  background: #826900;
+}
+/*# sourceMappingURL=home.css.map */
