@@ -300,10 +300,12 @@
         </div>
 
         <div class="boxes">
-          <div class="box">
+          <div class="box box1">
+            <div class="image">
             <img src="images/guest_1.png" alt="" />
+          </div>
             <div class="text">
-              <div class="title">
+              <div class="header">
                 <p>Mark</p>
                 <p>Business Manager</p>
               </div>
@@ -315,10 +317,12 @@
               </div>
             </div>
           </div>
-          <div class="box">
+          <div class="box box2">
+            <div class="image">
             <img src="images/guest_2.png" alt="" />
+          </div>
             <div class="text">
-              <div class="title">
+              <div class="header">
                 <p>John</p>
                 <p>Marketing Manager</p>
               </div>
@@ -330,12 +334,15 @@
               </div>
             </div>
           </div>
-          <div class="box">
+          <div class="box box3">
+            <div class="image">
             <img src="images/guest_3.png" alt="" />
+          </div>
+          
             <div class="text">
-              <div class="title">
+              <div class="header">
                 <p>David</p>
-                <p>Director</p>
+                <p>Project Manager</p>
               </div>
               <div class="content">
                 <p>
@@ -349,17 +356,22 @@
       </div>
     </div>
     <div class="blogs">
+      
       <div class="container">
         <div class="title">
           <p>Montserrat</p>
           <p>Read Blog</p>
           <p class="extra-title">Recent Blogs</p>
         </div>
+        
         <div class="slider-blog">
-          <div class="box">
+          
+          <div class="blogBox up">
+            <div class="blog-img">
             <img src="images/blog_1.jpg" alt="" />
+          </div>
             <div class="description">
-              <span>Firday, August 16, 2019</span>
+              <span>Friday, August 16, 2019</span>
               <span>Author: Kaung Khant Zaw</span>
             </div>
             <div class="blog-title">
@@ -369,8 +381,10 @@
               <a href="#">Read this blog</a>
             </div>
           </div>
-          <div class="box">
+          <div class="blogBox">
+            <div class="blog-img">
             <img src="images/blog_2.jpg" alt="" />
+          </div>
             <div class="description">
               <span>Saturday, September 19, 2019</span>
               <span>Author: James</span>
@@ -382,8 +396,10 @@
               <a href="#">Read this blog</a>
             </div>
           </div>
-          <div class="box">
+          <div class="blogBox">
+            <div class="blog-img">
             <img src="images/blog_3.jpg" alt="" />
+          </div>
             <div class="description">
               <span>Wednesday, September 16, 2019</span>
               <span>Author: Jonus</span>
@@ -394,34 +410,41 @@
             <div class="blog-btn">
               <a href="#">Read this blog</a>
             </div>
-          </div>
+          
         </div>
-        <div class="slider-trackers">
-          <div class="tracker"></div>
-          <div class="tracker"></div>
-          <div class="tracker"></div>
-        </div>
+        
       </div>
+      
+     
+      </div>
+      <div class="slider-trackers">
+        <div class="tracker now"></div>
+        <div class="tracker"></div>
+        <div class="tracker"></div>
+      </div>
+     
     </div>
     <div class="contact">
       <div class="container">
         <div class="title">
           <p>Montserrat</p>
-          <p>Read Blog</p>
-          <p class="extra-title">Recent Blogs</p>
+          <p>Contact Us</p>
+          <p class="extra-title">Reach out to us</p>
         </div>
         <div class="left-box">
-          <p>Address</p>
+          <p class="header">Address</p>
           <p>134 Elkview Drive, Miami, Florida</p>
-          <p>Lets talk</p>
+          <p class="header">Lets talk</p>
           <p>772-425-3846</p>
-          <p>General Support</p>
+          <p class="header">General Support</p>
           <p>Montserrat@yahoo.com</p>
           <div class="logos">
-            <img src="images/twitter.svg" alt="" />
-            <img src="images/facebook.svg" alt="" />
-            <img src="images/instagram(1).svg" alt="" />
-            <img src="images/youtube(1).svg" alt="" />
+            
+              <a href="#"><img src="images/twitter.svg" alt="" /></a>
+              <a href="#"><img src="images/facebook.svg" alt="" /></a>
+              <a href="#"><img src="images/instagram(1).svg" alt="" /></a>
+              <a href="#"><img src="images/youtube(1).svg" alt="" /></a>
+            
           </div>
           <div class="contact-btn">
             <button class="contactBtn">
@@ -430,28 +453,38 @@
           </div>
         </div>
         <div class="right-box">
+          <form action="">
           <div class="name">
             <img src="images/man-user.svg" alt="" />
-            <span>Name</span>
+            <span>
+            <input type="text" placeholder="Name" name="name">
+          </span>
           </div>
           <div class="phone">
             <img src="images/phone-receiver.svg" alt="" />
-            <span>Phone Number</span>
+            <span>
+            <input type="text" placeholder="Phone" name="name">
+          </span>
           </div>
           <div class="email">
             <img src="images/email.svg" alt="" />
-            <span>Email</span>
+              <span>
+            <input type="text" placeholder="Email" name="name">
+          </span>
           </div>
           <div class="message">
+            <div class="label">
             <img src="images/close-envelope.svg" alt="" />
-            <span>Message</span>
+            <label for="textarea">Message</label>
+          </div>
             <textarea
-              name=""
+              name="textarea"
               class="messageArea"
               cols="30"
               rows="10"
             ></textarea>
           </div>
+        </form>
           <div class="contact-submit">
             <button class="submitBtn">
               Submit
