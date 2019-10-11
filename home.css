@@ -271,7 +271,6 @@
 
 .welcome .container .text-container {
   width: 65%;
-  height: 600px;
   border: 2px solid #b69100;
   height: auto;
   padding: 60px;
@@ -411,6 +410,8 @@
 .rooms .place-holders .room .room-img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .rooms .place-holders .room .hover {
@@ -533,6 +534,7 @@
 .services {
   width: 80%;
   margin: auto;
+  margin-bottom: 140px;
 }
 
 .services .container .title {
@@ -634,5 +636,636 @@
 
 .services .container .service-btn a:hover {
   background: #826900;
+}
+
+.testimony {
+  width: 90%;
+  margin: 0 auto 140px auto;
+}
+
+.testimony .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+
+.testimony .container .title p {
+  color: #b69100;
+}
+
+.testimony .container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.testimony .container .title p:nth-child(2) {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.testimony .container .title .extra-title {
+  font-size: 50px;
+  font-family: "Nunito", sans-serif;
+  color: #404040;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.testimony .container .title .extra-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.testimony .container .boxes {
+  font-family: "Nunito", sans-serif;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.testimony .container .boxes .box {
+  width: 60%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimony .container .boxes .box .image {
+  margin: auto;
+  height: 130px;
+  width: 130px;
+}
+
+.testimony .container .boxes .box .image img {
+  width: 130px;
+  height: 130px;
+}
+
+.testimony .container .boxes .box .text {
+  width: 70%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 15px;
+  color: #404040;
+  border: 2px solid #a38b2d;
+}
+
+.testimony .container .boxes .box .text .header,
+.testimony .container .boxes .box .text .content {
+  width: 90%;
+  margin-top: -3%;
+}
+
+.testimony .container .boxes .box .text .header {
+  font-weight: 700;
+}
+
+.testimony .container .boxes .box .text .header p:first-child {
+  font-size: 20px;
+  padding: 3px 0;
+}
+
+.testimony .container .boxes .box .text .content p::before {
+  content: '"';
+  color: #b69100;
+}
+
+.testimony .container .boxes .box .text .content p::after {
+  content: '"';
+  color: #b69100;
+}
+
+.testimony .container .box2 {
+  margin-left: 40%;
+}
+
+.blogs {
+  width: 55%;
+  margin: auto;
+  height: 1000px;
+  margin-bottom: 140px;
+}
+
+.blogs .container {
+  width: 100%;
+  height: 100%;
+}
+
+.blogs .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+
+.blogs .container .title p {
+  color: #b69100;
+}
+
+.blogs .container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.blogs .container .title p:nth-child(2) {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.blogs .container .title .extra-title {
+  font-size: 50px;
+  font-family: "Nunito", sans-serif;
+  color: #404040;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.blogs .container .title .extra-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.blogs .container .slider-blog {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+}
+
+.blogs .container .slider-blog .blogBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f8f8f8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.blogs .container .slider-blog .blogBox .blog-img {
+  width: 100%;
+  height: 100%;
+}
+
+.blogs .container .slider-blog .blogBox .blog-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogs .container .slider-blog .blogBox .description {
+  padding: 6px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.blogs .container .slider-blog .blogBox .description span {
+  font-size: 1rem;
+  color: #000;
+  opacity: 0.5;
+}
+
+.blogs .container .slider-blog .blogBox .description span:last-child {
+  font-weight: 700;
+  padding-left: 10%;
+}
+
+.blogs .container .slider-blog .blogBox .blog-title {
+  padding: 5% 0 6% 0;
+}
+
+.blogs .container .slider-blog .blogBox .blog-title p {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.blogs .container .slider-blog .blogBox .blog-btn {
+  text-align: center;
+  margin-bottom: 7%;
+  font-family: "Nunito", sans-serif;
+}
+
+.blogs .container .slider-blog .blogBox .blog-btn a {
+  width: 110px;
+  text-decoration: none;
+  background: #b69100;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 36px;
+  text-align: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-weight: 700;
+}
+
+.blogs .container .slider-blog .blogBox .blog-btn a:hover {
+  background: #826900;
+}
+
+.blogs .container .slider-blog .up {
+  opacity: 1;
+  z-index: 3;
+}
+
+.blogs .slider-trackers {
+  width: 200px;
+  height: 30px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  z-index: 10;
+  padding-top: 30px;
+}
+
+.blogs .slider-trackers .tracker {
+  width: 25px;
+  height: 25px;
+  background: #b69100;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.blogs .slider-trackers .tracker:hover {
+  opacity: 0.7;
+}
+
+.blogs .slider-trackers .now {
+  opacity: 0.7;
+}
+
+.contact {
+  width: 100%;
+  height: 600px;
+}
+
+.contact .container {
+  font-family: "Nunito", sans-serif;
+}
+
+.contact .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+
+.contact .container .title p {
+  color: #b69100;
+}
+
+.contact .container .title p:first-child {
+  padding-bottom: 10px;
+}
+
+.contact .container .title p:nth-child(2) {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.contact .container .title .extra-title {
+  font-size: 50px;
+  font-family: "Nunito", sans-serif;
+  color: #404040;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.contact .container .title .extra-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #000;
+}
+
+.contact .container .left-box,
+.contact .container .right-box {
+  float: left;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  height: 600px;
+}
+
+.contact .container .left-box {
+  background-image: url(../images/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  padding: 6%;
+  padding: 5% 8%;
+}
+
+.contact .container .left-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.contact .container .left-box p,
+.contact .container .left-box .logos,
+.contact .container .left-box .contact-btn {
+  z-index: 2;
+}
+
+.contact .container .left-box p {
+  color: #fff;
+}
+
+.contact .container .left-box .header {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.contact .container .left-box .logos img {
+  width: 35px;
+  height: 35px;
+  margin-right: 7%;
+}
+
+.contact .container .left-box .contact-btn button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #b69100;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.contact .container .left-box .contact-btn button:hover {
+  background: #826900;
+}
+
+.contact .container .right-box {
+  background: #a38b2d;
+  color: #fff;
+  padding: 5% 8%;
+}
+
+.contact .container .right-box img {
+  width: 26px;
+  height: 26px;
+  margin: 0 3% 0 0;
+}
+
+.contact .container .right-box span {
+  position: relative;
+  width: 100%;
+}
+
+.contact .container .right-box span input {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #fff;
+}
+
+.contact .container .right-box span input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.contact .container .right-box span input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.contact .container .right-box span input::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.contact .container .right-box span input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.contact .container .right-box span input:focus::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.contact .container .right-box span input:focus:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.contact .container .right-box span input:focus::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.contact .container .right-box span input:focus::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.contact .container .right-box span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+}
+
+.contact .container .right-box input:-webkit-autofill,
+.contact .container .right-box input:-webkit-autofill:hover,
+.contact .container .right-box input:-webkit-autofill:focus,
+.contact .container .right-box textarea:-webkit-autofill,
+.contact .container .right-box textarea:-webkit-autofill:hover,
+.contact .container .right-box textarea:-webkit-autofill:focus,
+.contact .container .right-box select:-webkit-autofill,
+.contact .container .right-box select:-webkit-autofill:hover,
+.contact .container .right-box select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 30px #a38b2d inset !important;
+          box-shadow: 0 0 0 30px #a38b2d inset !important;
+}
+
+.contact .container .right-box input[type="text"] {
+  font-size: 1.1rem;
+}
+
+.contact .container .right-box .name,
+.contact .container .right-box .phone,
+.contact .container .right-box .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.contact .container .right-box .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .right-box .message .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1%;
+}
+
+.contact .container .right-box .message textarea {
+  background: none;
+  outline: none;
+  border: 2px solid #fff;
+  height: 150px;
+  padding: 10px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact .container .right-box .contact-submit button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  color: #b69100;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.contact .container .right-box .contact-submit button:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=home.css.map */
