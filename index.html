@@ -6,10 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Montserrat</title>
     <link rel="stylesheet" href="css/home.css" />
+    <script src="https://kit.fontawesome.com/69140e5682.js" crossorigin="anonymous"></script>
     <script defer src="js/home.js"></script>
   </head>
   <body>
     <div class="header">
+      <div class="for-ph">
+        <div class="logo-for-ph"><p>Montserrat</p></div>
+        
+        <div class="toggle-bar">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+      </div>
       <nav class="menu-bar">
         <a href="#" class="active">Home</a>
         <a href="#">Rooms</a>
@@ -17,6 +27,7 @@
         <a href="#">Services</a>
         <a href="#">Blogs</a>
       </nav>
+      
     </div>
     <div class="header-content">
       <div class="slider">
@@ -58,14 +69,17 @@
           <input type="date" required />
         </div>
         <div class="guest-numbers">
-          <p>Number of guests</p>
-          <input type="number" placeholder="Number of guests" required />
+          <p>Guest Amount</p>
+          <input type="number" placeholder="Guest Amount" required />
         </div>
         <div class="bookBtn">
           <button class="btn">
             Book
           </button>
         </div>
+      </div>
+      <div class="book-btn-for-small-size">
+        <a href="#">Book Now</a>
       </div>
     </div>
     <div class="welcome">
@@ -158,7 +172,6 @@
           <a href="#">View all rooms</a>
         </div>
       </div>
-    </div>
     <div class="services">
       <div class="container">
         <div class="title">
@@ -380,6 +393,7 @@
             <div class="blog-btn">
               <a href="#">Read this blog</a>
             </div>
+            
           </div>
           <div class="blogBox">
             <div class="blog-img">
@@ -395,6 +409,7 @@
             <div class="blog-btn">
               <a href="#">Read this blog</a>
             </div>
+            
           </div>
           <div class="blogBox">
             <div class="blog-img">
@@ -410,18 +425,18 @@
             <div class="blog-btn">
               <a href="#">Read this blog</a>
             </div>
-          
+            
         </div>
         
       </div>
+      <div class="trackers">
+        <i class="fas fa-chevron-left fa-3x" id="prevBtn"></i>
+          <i class="fas fa-chevron-right fa-3x" id="nextBtn"></i>
+      </div>
       
+      
+      </div>
      
-      </div>
-      <div class="slider-trackers">
-        <div class="tracker now"></div>
-        <div class="tracker"></div>
-        <div class="tracker"></div>
-      </div>
      
     </div>
     <div class="contact">
@@ -447,9 +462,7 @@
             
           </div>
           <div class="contact-btn">
-            <button class="contactBtn">
-              Book Now
-            </button>
+            <a href="#">Book Now</a>
           </div>
         </div>
         <div class="right-box">
