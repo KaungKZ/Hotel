@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display:400,700|Poppins:400,700&display=swap");
-$content: "Nunito", sans-serif;
-$header: "Playfair Display", serif;
-$extra: "Poppins", sans-serif;
-
-$primary: #b69100;
-$secondary: #a38b2d;
-$light-header: #404040;
-
-$margin: 140px;
+@import "global";
 
 * {
   margin: 0;
@@ -1119,7 +1110,36 @@ $margin: 140px;
     }
   }
 }
+// ============================= click-to-top ====================================
+.click-to-top {
+  display: none;
+  opacity: 0;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 95%;
+  left: 95%;
+  transform: translate(-95%, -95%);
+  background: #fff;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+  transition: 400ms all;
+  scroll-behavior: smooth;
 
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    i {
+      font-size: 1.3rem;
+      color: $primary;
+    }
+  }
+}
 // ==================================================== Media Queries =============================================================
 // Phone Size
 @media (max-width: 480px) {
