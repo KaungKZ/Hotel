@@ -1,3 +1,15 @@
+// =================================== Toggle ========================================
+const toggle = document.querySelector(".toggle-bar");
+const menuBar = document.querySelector(".menu-bar");
+
+function toggleClicked() {
+  this.classList.toggle("active-toggle");
+  menuBar.classList.toggle("toggle-active");
+}
+
+toggle.addEventListener("click", toggleClicked);
+
+// ================================== Carousel =====================================
 const carousel = document.querySelector(".slider");
 const slides = carousel.querySelectorAll(".slide");
 const next = document.querySelector("#nextBtn");
@@ -46,12 +58,47 @@ prevBtn.addEventListener("click", () => {
   prevBlog();
 });
 
-const toggle = document.querySelector(".toggle-bar");
-const menuBar = document.querySelector(".menu-bar");
+// ============================= Smooth click-to-top button ========================================
 
-function toggleClicked() {
-  this.classList.toggle("active-toggle");
-  menuBar.classList.toggle("toggle-active");
+function smoothScroll(target, duration) {
+  const goal = document.querySelector(target);
+  const targetPosition = goal.getBoundingClientRect().top;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  var startTime = null;
+
+  function Scrollanimation(time) {
+    if (startTime === null) {
+      startTime = time;
+    }
+    const timeElapsed = time - startTime;
+    const run = calculation(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(Scrollanimation);
+    }
+  }
+  function calculation(t, b, c, d) {
+    t /= d;
+    return -c * t * (t - 2) + b;
+  }
+  requestAnimationFrame(Scrollanimation);
 }
 
-toggle.addEventListener("click", toggleClicked);
+const topButton = document.querySelector(".click-to-top");
+window.addEventListener("scroll", () => {
+  const height = document.body.scrollHeight;
+  if (this.pageYOffset > height / 2) {
+    topButton.style.display = "block";
+    topButton.style.opacity = "1";
+  } else {
+    topButton.style.display = "none";
+    topButton.style.opacity = "0";
+  }
+});
+topButton.addEventListener("click", function() {
+  console.log(this.pageYOffset);
+
+  smoothScroll(".header", 1000);
+});
