@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/home.css" />
     <script src="https://kit.fontawesome.com/69140e5682.js" crossorigin="anonymous"></script>
     <script defer src="js/home.js"></script>
+    <!-- <script defer src="js/global.js"></script> -->
   </head>
   <body>
-    <div class="header">
+    <!-- Header -->
+    <div class="header" id="header">
       <div class="for-ph">
         <div class="logo-for-ph"><p>Montserrat</p></div>
         
@@ -21,14 +23,15 @@
           </div>
       </div>
       <nav class="menu-bar">
-        <a href="#" class="active">Home</a>
-        <a href="#">Rooms</a>
-        <a href="#" class="logo">Montserrat</a>
-        <a href="#">Services</a>
-        <a href="#">Blogs</a>
+        <a href="index.html" class="active" data-link = 'true'>Home</a>
+        <a href="rooms.html" data-link = 'true'>Rooms</a>
+        <a href="#" class="logo" >Montserrat</a>
+        <a href="#" data-link = 'true'>Services</a>
+        <a href="#" data-link = 'true'>Blogs</a>
       </nav>
       
     </div>
+    <!-- Header-content -->
     <div class="header-content">
       <div class="slider">
         <div class="slide current">
@@ -82,6 +85,7 @@
         <a href="#">Book Now</a>
       </div>
     </div>
+    <!-- Welcome part -->
     <div class="welcome">
       <div class="container">
         <div class="text-container">
@@ -104,6 +108,7 @@
         </div>
       </div>
     </div>
+    <!-- Rooms -->
     <div class="rooms">
       <div class="container">
         <div class="title">
@@ -172,6 +177,7 @@
           <a href="#">View all rooms</a>
         </div>
       </div>
+      <!-- Services -->
     <div class="services">
       <div class="container">
         <div class="title">
@@ -304,6 +310,7 @@
         </div>
       </div>
     </div>
+    <!-- Testimony -->
     <div class="testimony">
       <div class="container">
         <div class="title">
@@ -368,6 +375,7 @@
         </div>
       </div>
     </div>
+    <!-- Blogs -->
     <div class="blogs">
       
       <div class="container">
@@ -439,6 +447,7 @@
      
      
     </div>
+    <!-- Contact -->
     <div class="contact">
       <div class="container">
         <div class="title">
@@ -506,5 +515,10 @@
         </div>
       </div>
     </div>
+    <!-- Click to top button -->
+    <div class="click-to-top">
+      <div class="arrow"><i class="fas fa-chevron-up"></i></div>
+    </div>
+    
   </body>
 </html>
