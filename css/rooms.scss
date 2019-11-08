@@ -382,18 +382,15 @@
       .active-toggle {
         transition: all 400ms;
         position: relative;
+
         .line {
-          // background: #e8ad1a;
           background: #fff;
           transition: all 400ms;
-          //transition-delay: 500ms;
         }
         .line1 {
           -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-          //-webkit-transform-origin: 15% 15%;
           transform-origin: 27.5%;
-          // transform-origin: 13%;
         }
         .line2 {
           display: none;
@@ -401,7 +398,6 @@
         .line3 {
           -webkit-transform: rotate(45deg);
           transform: rotate(-45deg);
-          //-webkit-transform-origin: 15% 95%;
           transform-origin: 27.5%;
         }
       }
