@@ -1574,7 +1574,7 @@
       }
     }
     .place-holders {
-      width: 90%;
+      width: 75%;
       margin: auto;
       grid-template-columns: 1fr;
       .room {
@@ -1737,6 +1737,9 @@
   }
 }
 @media (min-width: 680px) and (max-width: 765px) {
+  .welcome {
+  margin: 140px auto 100px auto;
+  }
   .blogs {
     height: 770px;
     .container .trackers {
