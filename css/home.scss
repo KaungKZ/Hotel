@@ -18,23 +18,65 @@
     align-items: center;
     z-index: -1;
     display: none;
+    p {
+      font-size: 1.4rem;
 
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #000;
+      }
+    }
     .toggle-bar {
       width: 28px;
       height: 20px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
       cursor: pointer;
 
-      .line {
-        margin-bottom: 5px;
+      span {
+        display: block;
+        position: absolute;
         height: 3px;
         width: 100%;
         background: #000;
-        border-radius: 8px;
+        border-radius: 50px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+      span:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(2) {
+        top: 7px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(3) {
+        top: 14px;
+        transform-origin: left center;
       }
     }
+    .open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3px;
+      left: 3px;
+    }
 
-    p {
-      font-size: 1.4rem;
+    .open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 17px;
+      left: 3px;
     }
   }
   .menu-bar {
@@ -177,7 +219,7 @@
     position: absolute;
     top: 80%;
     left: 5%;
-    // transform: translateX(-5%);
+
     width: 90%;
     height: 90px;
     margin: auto;
@@ -247,34 +289,42 @@
     }
   }
   .book-btn-for-small-size {
-    font-family: $content;
     position: absolute;
     top: 80%;
-    left: 40%;
-    transform: translateX(-40%);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
     height: 60px;
-    background: $secondary;
     transition: 400ms;
     z-index: -100;
     display: none;
     pointer-events: none;
     cursor: pointer;
+    background: transparent;
+    border: 2px solid #fff;
+    font-family: $extra;
 
     a {
       width: 100%;
       text-decoration: none;
       color: #fff;
-      font-size: 1.4rem;
+
       text-align: center;
-      font-weight: 700;
+      font-weight: 500;
+
+      font-size: 1.8rem;
+      text-transform: uppercase;
     }
     &:hover {
       // border: none;
-      background: #826900;
+      background: #fff;
+      border: none;
+
+      a {
+        color: $light-header;
+      }
     }
   }
 }
@@ -929,7 +979,7 @@
     .left-box,
     .right-box {
       float: left;
-      width: 50%;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -937,6 +987,7 @@
       height: 600px;
     }
     .left-box {
+      width: 45%;
       background-image: url(../images/contact.jpg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -997,9 +1048,12 @@
       }
     }
     .right-box {
-      background: $secondary;
+      width: 54.5%;
+      background: #fff;
       color: #fff;
       padding: 5% 8%;
+      margin-left: 5px;
+      border: 2px solid $light-header;
 
       form {
         height: 100%;
@@ -1019,10 +1073,10 @@
             outline: none;
             border: none;
             width: 100%;
-            color: #fff;
+            color: $light-header;
 
             &::placeholder {
-              color: #fff;
+              color: $light-header;
               opacity: 0.8;
               font-family: $content;
             }
@@ -1035,7 +1089,7 @@
             position: absolute;
             top: 100%;
             left: 0%;
-            background: #fff;
+            background: $light-header;
             width: 100%;
             height: 2px;
           }
@@ -1050,8 +1104,8 @@
         select:-webkit-autofill:hover,
         select:-webkit-autofill:focus {
           border: none;
-          -webkit-text-fill-color: #fff;
-          box-shadow: 0 0 0 30px $secondary inset !important;
+          -webkit-text-fill-color: $light-header;
+          box-shadow: 0 0 0 30px #f4f4f4 inset !important;
         }
         input[type="text"] {
           font-size: 1.1rem;
@@ -1077,16 +1131,16 @@
           textarea {
             background: none;
             outline: none;
-            border: 2px solid #fff;
+            border: 2px solid $light-header;
             height: 150px;
             padding: 10px;
-            color: #fff;
+            color: $light-header;
             font-family: $content;
             font-size: 1rem;
             resize: none;
 
             &:focus {
-              background: #fff;
+              background: $light-header;
               color: #000;
             }
           }
@@ -1149,37 +1203,11 @@
       z-index: 1;
       display: flex;
       .toggle-bar {
-        z-index: 10;
-        transition: all 400ms;
+        margin-top: 7px;
+        z-index: 102;
       }
-      .logo-for-ph {
-        cursor: pointer;
-      }
-      .active-toggle {
-        transition: all 400ms;
-        position: relative;
-        .line {
-          // background: #e8ad1a;
-          background: #fff;
-          transition: all 400ms;
-          //transition-delay: 500ms;
-        }
-        .line1 {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          //-webkit-transform-origin: 15% 15%;
-          transform-origin: 27.5%;
-          // transform-origin: 13%;
-        }
-        .line2 {
-          display: none;
-        }
-        .line3 {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(-45deg);
-          //-webkit-transform-origin: 15% 95%;
-          transform-origin: 27.5%;
-        }
+      .open span {
+        background: #fff;
       }
     }
     .menu-bar {
@@ -1218,7 +1246,7 @@
     .toggle-active {
       transform: translateX(0%);
       pointer-events: all;
-      z-index: 6;
+      z-index: 101;
       display: flex;
     }
   }
@@ -1239,6 +1267,7 @@
       z-index: 100;
       display: flex;
       pointer-events: all;
+      width: 70%;
     }
   }
   .welcome {
@@ -1529,57 +1558,64 @@
       z-index: 100;
       display: flex;
       pointer-events: all;
+
+      width: 60%;
     }
   }
-  .welcome .container {
-    .text-container {
-      width: 100%;
-      padding: 60px;
-      .title {
-        text-align: center;
+  .welcome {
+    // margin: 140px auto 0px auto;
+    .container {
+      .text-container {
+        width: 100%;
+        padding: 60px;
+        .title {
+          text-align: center;
 
+          p:last-child {
+            font-size: 26px;
+            margin-bottom: 40px;
+          }
+        }
+
+        .content {
+          width: 100%;
+
+          p {
+            font-size: 18px;
+            line-height: 2.4;
+          }
+        }
+      }
+      .photo {
+        width: 80%;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          margin-top: 10px;
+          height: 35vh;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+  }
+  .rooms {
+    .container {
+      .title {
         p:last-child {
           font-size: 26px;
-          margin-bottom: 40px;
         }
       }
-
-      .content {
-        width: 100%;
-
-        p {
-          font-size: 18px;
-          line-height: 2.4;
-        }
-      }
-    }
-    .photo {
-      width: 80%;
-      top: 90%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      img {
-        margin-top: 10px;
-        height: 35vh;
-        object-fit: cover;
-        object-position: top;
-      }
-    }
-  }
-  .rooms .container {
-    .title {
-      p:last-child {
-        font-size: 26px;
-      }
-    }
-    .place-holders {
-      width: 75%;
-      margin: auto;
-      grid-template-columns: 1fr;
-      .room {
-        .hover p:first-child {
-          font-size: 26px;
+      .place-holders {
+        width: 75%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        .room {
+          .hover p:first-child {
+            font-size: 26px;
+          }
         }
       }
     }
@@ -1738,7 +1774,7 @@
 }
 @media (min-width: 680px) and (max-width: 765px) {
   .welcome {
-  margin: 140px auto 100px auto;
+    margin: 140px auto 100px auto;
   }
   .blogs {
     height: 770px;
