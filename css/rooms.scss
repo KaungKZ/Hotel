@@ -18,22 +18,65 @@
     z-index: -1;
     display: none;
 
+    p {
+      font-size: 1.4rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #000;
+      }
+    }
     .toggle-bar {
       width: 28px;
       height: 20px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
       cursor: pointer;
 
-      .line {
-        margin-bottom: 5px;
+      span {
+        display: block;
+        position: absolute;
         height: 3px;
         width: 100%;
         background: #000;
-        border-radius: 8px;
+        border-radius: 50px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+      span:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(2) {
+        top: 7px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(3) {
+        top: 14px;
+        transform-origin: left center;
       }
     }
+    .open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3px;
+      left: 3px;
+    }
 
-    p {
-      font-size: 1.4rem;
+    .open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 17px;
+      left: 3px;
     }
   }
   .menu-bar {
@@ -373,33 +416,11 @@
       z-index: 1;
       display: flex;
       .toggle-bar {
+        margin-top: 7px;
         z-index: 10;
-        transition: all 400ms;
       }
-      .logo-for-ph {
-        cursor: pointer;
-      }
-      .active-toggle {
-        transition: all 400ms;
-        position: relative;
-
-        .line {
-          background: #fff;
-          transition: all 400ms;
-        }
-        .line1 {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          transform-origin: 27.5%;
-        }
-        .line2 {
-          display: none;
-        }
-        .line3 {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(-45deg);
-          transform-origin: 27.5%;
-        }
+      .open span {
+        background: #fff;
       }
     }
     .menu-bar {
