@@ -1,0 +1,561 @@
+@import "global";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $bg-color;
+}
+// ============== custom scroll bar ==========================
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary;
+}
+// ========================================================= HEADER MENU-BAR =====================================================
+.header {
+  width: 100%;
+  font-family: $header;
+  .for-ph {
+    width: 100%;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+    display: none;
+
+    p {
+      font-size: 1.4rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #000;
+      }
+    }
+    .toggle-bar {
+      width: 28px;
+      height: 20px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #000;
+        border-radius: 50px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+      span:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(2) {
+        top: 7px;
+        transform-origin: left center;
+      }
+
+      span:nth-child(3) {
+        top: 14px;
+        transform-origin: left center;
+      }
+    }
+    .open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3px;
+      left: 3px;
+    }
+
+    .open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 17px;
+      left: 3px;
+    }
+  }
+  .menu-bar {
+    width: 80%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: -10%;
+        width: 120%;
+        margin: auto;
+        height: 40%;
+        background: none;
+        z-index: -1;
+        transition: all 400ms;
+        opacity: 0.7;
+      }
+
+      &:hover:after {
+        content: "";
+        top: 0%;
+        height: 100%;
+        transform-origin: bottom;
+        background: $primary;
+        opacity: 1;
+      }
+      &:hover {
+        color: #fff;
+        transition: all 400ms;
+        transition-delay: 200ms;
+      }
+    }
+    .active {
+      position: relative;
+      transition: all 400ms;
+      transition-delay: 100ms;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: -10%;
+        width: 120%;
+        margin: auto;
+        height: 40%;
+        background: $primary;
+        z-index: -1;
+        transition: all 400ms;
+      }
+      &:hover:after {
+        content: "";
+        position: absolute;
+        top: 0%;
+        height: 100%;
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
+    .logo {
+      margin-top: -7px;
+      font-size: 2rem;
+    }
+  }
+}
+// ====================================== Background ================================
+.header-bg {
+  height: 400px;
+  background-image: url(../assets/rooms_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+
+  .container {
+    width: 100%;
+    height: 100%;
+
+    .title {
+      width: 70%;
+      margin: auto;
+      font-family: $extra;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 70px;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+        z-index: 3;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+// =================================== Room-details =================================
+.room-details {
+  font-family: $extra;
+  width: 80%;
+  margin: auto;
+
+  .container {
+    width: 100%;
+
+    .detail {
+      width: 100%;
+      height: 460px;
+      .text {
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding: 7% 5% 7% 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+
+        .title {
+          position: relative;
+          p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $light-header;
+          }
+          .price {
+            color: $primary;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -15%;
+            left: 22.5%;
+            width: 55%;
+            height: 2px;
+            background: $light-header;
+            color: #000;
+          }
+        }
+        .content p {
+          margin: auto;
+          font-size: 1.1rem;
+          color: $light-header;
+          letter-spacing: 5%;
+          line-height: 35px;
+        }
+        .book-btn {
+          width: 80%;
+          height: 60px;
+          margin: 0 auto;
+          border: 1px solid $primary;
+          cursor: pointer;
+          transition: background 400ms;
+
+          a {
+            text-decoration: none;
+            color: $primary;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+          }
+          &:hover {
+            border: none;
+            background: $primary;
+          }
+          &:hover a {
+            color: #fff;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 35%;
+          left: 103%;
+          background: #fff;
+          transform: translate(-50%, -35%);
+          width: 50px;
+          height: 50px;
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
+        }
+      }
+      .photo {
+        width: 50%;
+        height: 100%;
+        float: right;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .detail-2,
+    .detail-4,
+    .detail-6 {
+      .text {
+        padding-left: 5%;
+        float: right;
+
+        &::after {
+          left: -3%;
+          clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        }
+      }
+      .photo {
+        float: left;
+      }
+    }
+    .detail-1 {
+      margin-top: -50px;
+
+      z-index: 10;
+      .text {
+        padding-bottom: calc(7% - 25px);
+      }
+    }
+  }
+}
+// =================================== Footer ======================================
+.footer {
+  width: 100%;
+  height: 100px;
+  background: $light-header;
+  font-family: $extra;
+  font-weight: 400;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .phone {
+      p:first-child {
+        font-size: 14px;
+      }
+      p:last-child {
+        font-size: 12px;
+      }
+    }
+    .social-media {
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+      .icons a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0 3px;
+      }
+    }
+    .copyright {
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// ============================ Media-queries =============================
+// Small Tablet Size
+@media (min-width: 481px) and (max-width: 767px) {
+  .header .menu-bar {
+    a {
+      font-size: 14px;
+    }
+    .logo {
+      font-size: 1.3rem;
+    }
+  }
+  .header-bg .container .title {
+    font-size: 60px;
+  }
+}
+// Normal Tablet Size
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-bg .container .title {
+    width: 80%;
+  }
+}
+// Extra Size to fix
+@media (min-width: 481px) and (max-width: 841px) {
+  .room-details .container .detail-1 .text {
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 481px) and (max-width: 803px) {
+  .room-details .container .detail .text {
+    .title p {
+      font-size: 1.6rem;
+    }
+    .content p {
+      font-size: 1rem;
+    }
+  }
+}
+// Phone Size
+@media (max-width: 480px) {
+  .header {
+    overflow: hidden;
+    .for-ph {
+      z-index: 1;
+      display: flex;
+      .toggle-bar {
+        margin-top: 7px;
+        z-index: 10;
+      }
+      .open span {
+        background: #fff;
+      }
+    }
+    .menu-bar {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background: #a38b2d;
+      transform: translateX(100%);
+      display: none;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      pointer-events: none;
+      transition: all 500ms;
+
+      a {
+        color: #fff;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+          content: "";
+          display: none;
+        }
+        &:hover:after {
+          content: "";
+          display: none;
+        }
+      }
+    }
+    .toggle-active {
+      transform: translateX(0%);
+      pointer-events: all;
+      z-index: 13;
+      display: flex;
+    }
+  }
+  .header-bg .container .title {
+    font-size: 50px;
+  }
+  .room-details {
+    .container {
+      .detail-1 {
+        margin-top: 0;
+      }
+      .detail {
+        margin-top: 30%;
+        height: 1000px;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .text {
+          padding-bottom: 0;
+        }
+        .text {
+          width: 100%;
+          height: 60%;
+          float: none;
+          justify-content: space-evenly;
+          padding: 0;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -4%;
+            left: 70%;
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          }
+        }
+        .photo {
+          width: 100%;
+          height: 40%;
+          float: none;
+        }
+      }
+    }
+  }
+  .footer {
+    height: 200px;
+    .container {
+      height: 200px;
+      width: 90%;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .phone {
+        p:first-child {
+          font-size: 12px;
+        }
+        p:last-child {
+          font-size: 10px;
+        }
+      }
+      .social-media {
+        p {
+          font-size: 12px;
+        }
+        .icons a i {
+          font-size: 12px;
+        }
+      }
+      .copyright p {
+        font-size: 14px;
+      }
+    }
+  }
+}
