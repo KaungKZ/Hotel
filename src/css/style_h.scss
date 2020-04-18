@@ -1,0 +1,47 @@
+// base variables and font links
+
+@import "base";
+
+// root styles
+
+@import "root";
+
+// header
+
+@import "./home/header";
+
+// header-content
+
+@import "./home/header-content";
+
+// welcome
+
+@import "./home/welcome";
+
+// rooms
+
+@import "./home/rooms";
+
+// services
+
+@import "./home/services";
+
+// testimony
+
+@import "./home/testimony";
+
+// blogs
+
+@import "./home/blogs";
+
+// contact
+
+@import "./home/contact";
+
+// click-to-top btn
+
+@import "./home/ctt";
+
+// media queries
+
+@import "./home/media-queries";

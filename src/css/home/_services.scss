@@ -1,0 +1,90 @@
+.services {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 140px;
+  .container {
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $header;
+
+      p {
+        color: $primary;
+      }
+
+      p:first-child {
+        padding-bottom: 10px;
+      }
+
+      p:nth-child(2) {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 70px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -25%;
+          left: 15%;
+          width: 70%;
+          height: 2px;
+          background: $light-header;
+        }
+      }
+      .extra-title {
+        font-size: 30px;
+        font-family: $content;
+        color: $light-header;
+        margin-bottom: 70px;
+      }
+    }
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: auto;
+
+      svg {
+        background: #efefef;
+        padding: 28px;
+        height: 140px;
+        width: 100%;
+        margin: 10px;
+        cursor: pointer;
+        transition: 400ms;
+
+        &:hover {
+          background: $primary;
+          fill: #fff;
+        }
+      }
+    }
+    .service-btn {
+      text-align: center;
+      margin: 60px auto 0 auto;
+      width: 100%;
+      font-family: $content;
+
+      a {
+        width: 110px;
+        text-decoration: none;
+        background: $primary;
+        color: #fff;
+        font-size: 1rem;
+        padding: 8px 36px;
+
+        text-align: center;
+        transition: 400ms;
+        font-weight: 700;
+
+        &:hover {
+          background: #826900;
+        }
+      }
+    }
+  }
+}

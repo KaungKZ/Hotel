@@ -1,0 +1,815 @@
+@media (max-width: 480px) {
+  .header {
+    overflow: hidden;
+    .for-ph {
+      z-index: 1;
+      display: flex;
+      .toggle-bar {
+        margin-top: 7px;
+        z-index: 102;
+      }
+      .open span {
+        background: #fff;
+      }
+    }
+    .menu-bar {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background: #a38b2d;
+      transform: translateX(100%);
+      display: none;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      pointer-events: none;
+      transition: all 500ms;
+
+      a {
+        color: #fff;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+          content: "";
+          display: none;
+        }
+        &:hover:after {
+          content: "";
+          display: none;
+        }
+      }
+    }
+    .toggle-active {
+      transform: translateX(0%);
+      pointer-events: all;
+      z-index: 101;
+      display: flex;
+    }
+  }
+  .header-content {
+    .slider .slide .text {
+      p:first-child {
+        font-size: 3.5rem;
+      }
+      p:last-child {
+        font-size: 1.35rem;
+      }
+    }
+    .check-in-container {
+      display: none;
+      opacity: 0;
+    }
+    .book-btn-for-small-size {
+      z-index: 10;
+      display: flex;
+      pointer-events: all;
+      width: 70%;
+    }
+  }
+  .welcome {
+    height: auto;
+    .container {
+      .text-container {
+        width: 100%;
+        padding: 40px;
+        .title {
+          text-align: center;
+          p:first-child {
+            font-size: 14px;
+          }
+          p:last-child {
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+          }
+        }
+
+        .content {
+          width: 100%;
+
+          p {
+            font-size: 14px;
+            line-height: 2.4;
+          }
+        }
+      }
+      .photo {
+        position: static;
+        width: 90%;
+        margin: 40px auto 0 auto;
+
+        img {
+          margin-top: 0px;
+          height: 35vh;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+  }
+  .rooms {
+    .container {
+      .title {
+        p:first-child {
+          font-size: 14px;
+        }
+        p:last-child {
+          font-size: 1.35rem;
+        }
+      }
+      .place-holders {
+        width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        .room {
+          .hover {
+            p:first-child,
+            p:nth-child(2) {
+              font-size: 1.25rem;
+            }
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .view-all-rooms a {
+      font-size: 14px;
+    }
+  }
+  .services .container {
+    .title {
+      .extra-title {
+        text-align: center;
+        font-size: 1.7rem;
+        margin-bottom: 45px;
+      }
+      p:first-child {
+        font-size: 14px;
+      }
+      p:nth-child(2) {
+        font-size: 1.35rem;
+        margin-bottom: 45px;
+      }
+    }
+
+    .icons {
+      flex-direction: column;
+      width: 70%;
+      margin: auto;
+      svg {
+        padding: 34px;
+      }
+    }
+    .service-btn a {
+      font-size: 14px;
+    }
+  }
+  .testimony .container {
+    .title {
+      .extra-title {
+        font-size: 1.7rem;
+      }
+      p:nth-child(2) {
+        font-size: 1.35rem;
+      }
+      p:first-child {
+        font-size: 14px;
+      }
+    }
+    .boxes {
+      height: 630px;
+      .box {
+        width: 100%;
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        .text {
+          height: 70%;
+          .header {
+            p:first-child {
+              font-size: 14px;
+              padding: 3px 0;
+            }
+            p:last-child {
+              font-size: 12px;
+            }
+          }
+          .content {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .boxes .box2 {
+      margin-left: 0%;
+      flex-direction: row-reverse;
+    }
+  }
+  .blogs {
+    width: 80%;
+    height: 600px;
+    .container {
+      .title {
+        .extra-title {
+          font-size: 1.7rem;
+        }
+        p:nth-child(2) {
+          font-size: 1.35rem;
+        }
+        p:first-child {
+          font-size: 14px;
+        }
+      }
+      .slider-blog {
+        width: 90%;
+        margin: auto;
+        .blogBox {
+          .description {
+            span {
+              font-size: 12px;
+              display: block;
+              text-align: center;
+            }
+            span:last-child {
+              padding: 0;
+            }
+          }
+          .blog-title {
+            width: 90%;
+            text-align: center;
+            margin: 5% 0 7% 0;
+
+            p {
+              font-size: 16px;
+            }
+          }
+          .blog-btn {
+            margin: 0 0 14% 0;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .trackers {
+        height: 20px;
+        #prevBtn,
+        #nextBtn {
+          top: 65%;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .contact .container {
+    .title {
+      .extra-title {
+        font-size: 1.7rem;
+      }
+      p:nth-child(2) {
+        font-size: 1.35rem;
+      }
+      p:first-child {
+        font-size: 14px;
+      }
+    }
+    .left-box,
+    .right-box {
+      padding: 10% 8%;
+      float: none;
+      width: 100%;
+    }
+    .left-box {
+      p,
+      .header {
+        text-align: center;
+        font-size: 14px;
+      }
+      .contact-btn a {
+        font-size: 1.1rem;
+      }
+      .logos {
+        text-align: center;
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    .right-box .contact-submit button {
+      font-size: 1.1rem;
+    }
+    .right-box {
+      flex-direction: column;
+      height: 500px;
+      justify-content: space-between;
+      padding: 20px;
+      .message {
+        p {
+          font-size: 1rem;
+        }
+
+        .text-area {
+          .icon-for-textarea img {
+            width: 25px;
+            height: 25px;
+          }
+          textarea {
+            font-size: 14px;
+            height: 120px;
+          }
+        }
+      }
+      .message,
+      .news-letter,
+      .more-infos {
+        width: 100%;
+        padding-right: 10px;
+      }
+      .news-letter {
+        p {
+          font-size: 1rem;
+        }
+
+        .email-input {
+          input[type="text"] {
+            font-size: 14px;
+          }
+        }
+      }
+      .more-infos {
+        p {
+          text-align: center;
+        }
+        .logos {
+          text-align: center;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .infos {
+          place-items: center;
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+      .copyright {
+        position: static;
+      }
+    }
+  }
+}
+// ---------------------------------------------- Small Tablet Size ------------------------------------------------
+@media (min-width: 481px) and (max-width: 768px) {
+  .header .menu-bar {
+    a {
+      font-size: 14px;
+    }
+    .logo {
+      font-size: 1.3rem;
+    }
+  }
+  .header-content {
+    .slider .slide .text {
+      p:first-child {
+        font-size: 4rem;
+      }
+      p:last-child {
+        font-size: 1.5rem;
+      }
+    }
+    .check-in-container {
+      display: none;
+      opacity: 0;
+    }
+    .book-btn-for-small-size {
+      z-index: 100;
+      display: flex;
+      pointer-events: all;
+
+      width: 60%;
+    }
+  }
+  .welcome {
+    .container {
+      .text-container {
+        width: 100%;
+        padding: 60px;
+        .title {
+          text-align: center;
+
+          p:last-child {
+            font-size: 26px;
+            margin-bottom: 40px;
+          }
+        }
+
+        .content {
+          width: 100%;
+
+          p {
+            font-size: 18px;
+            line-height: 2.4;
+          }
+        }
+      }
+      .photo {
+        width: 80%;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          margin-top: 10px;
+          height: 35vh;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+  }
+  .rooms {
+    .container {
+      .title {
+        p:last-child {
+          font-size: 26px;
+        }
+      }
+      .place-holders {
+        width: 75%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        .room {
+          .hover p:first-child {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+  .services .container {
+    .title {
+      .extra-title {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      p:nth-child(2) {
+        font-size: 26px;
+      }
+    }
+
+    .icons svg {
+      padding: 20px;
+    }
+  }
+  .testimony .container {
+    .title {
+      .extra-title {
+        font-size: 2.2rem;
+      }
+      p:nth-child(2) {
+        font-size: 26px;
+      }
+    }
+    .boxes .box {
+      width: 100%;
+      .image {
+        text-align: center;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .text {
+        .header {
+          p:first-child {
+            font-size: 18px;
+            padding: 3px 0;
+          }
+          p:last-child {
+            font-size: 14px;
+          }
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+    .boxes .box2 {
+      margin-left: 0%;
+      flex-direction: row-reverse;
+    }
+  }
+  .blogs {
+    width: 80%;
+    .container {
+      .title {
+        .extra-title {
+          font-size: 2.2rem;
+        }
+        p:nth-child(2) {
+          font-size: 26px;
+        }
+      }
+      .slider-blog .blogBox {
+        .description {
+          span {
+            font-size: 14px;
+          }
+        }
+        .blog-title {
+          width: 90%;
+          text-align: center;
+          padding: 5% 0 7% 0;
+
+          p {
+            font-size: 18px;
+          }
+        }
+        .blog-btn {
+          margin-bottom: 8%;
+        }
+      }
+    }
+  }
+  .contact .container {
+    .title {
+      .extra-title {
+        font-size: 2.2rem;
+      }
+      p:nth-child(2) {
+        font-size: 26px;
+      }
+    }
+    .left-box,
+    .right-box {
+      padding: 10% 8%;
+      float: none;
+      width: 100%;
+    }
+    .left-box {
+      p {
+        text-align: center;
+      }
+      .header {
+        font-size: 1rem;
+      }
+      .contact-btn a {
+        font-size: 1.2rem;
+      }
+      .logos {
+        text-align: center;
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    .right-box {
+      justify-content: space-between;
+      padding: 20px;
+      .message {
+        p {
+          font-size: 1rem;
+        }
+        flex: 1;
+        .text-area {
+          .icon-for-textarea img {
+            width: 25px;
+            height: 25px;
+          }
+          textarea {
+            font-size: 14px;
+            height: 120px;
+          }
+        }
+      }
+      .message,
+      .news-letter {
+        padding-right: 20px;
+      }
+      .news-letter {
+        flex: 1;
+        p {
+          font-size: 1rem;
+        }
+
+        .email-input {
+          input[type="text"] {
+            font-size: 14px;
+          }
+        }
+      }
+      .more-infos {
+        flex: 1;
+
+        .logos {
+          text-align: center;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .infos {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// ----------------------------- Extra Size to fix ---------------------------------------
+@media (min-width: 481px) and (max-width: 679px) {
+  .blogs {
+    height: 700px;
+    .container .trackers {
+      #prevBtn,
+      #nextBtn {
+        position: absolute;
+        top: 75%;
+        transform: translateY(-75%);
+      }
+    }
+  }
+}
+@media (min-width: 680px) and (max-width: 765px) {
+  .welcome {
+    margin: 140px auto 100px auto;
+  }
+  .blogs {
+    height: 770px;
+    .container .trackers {
+      #prevBtn,
+      #nextBtn {
+        position: absolute;
+        top: 70%;
+        transform: translateY(-70%);
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 840px) {
+  .blogs {
+    height: 800px;
+    .container .trackers {
+      #prevBtn,
+      #nextBtn {
+        position: absolute;
+        top: 65%;
+        transform: translateY(-65%);
+      }
+    }
+  }
+}
+@media (min-width: 481px) and (max-width: 580px) {
+  .blogs .container .trackers {
+    #prevBtn,
+    #nextBtn {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-60%);
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .blogs {
+    height: 1100px;
+    .container .trackers {
+      #prevBtn,
+      #nextBtn {
+        top: 60%;
+      }
+    }
+  }
+}
+@media (min-width: 1830px) {
+  .blogs {
+    height: 1200px;
+  }
+}
+
+// ------------------------------------------------------- Normal Tablet Size ---------------------------------------------
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-content {
+    .slider .slide .text {
+      p:first-child {
+        font-size: 4.7rem;
+      }
+      p:last-child {
+        font-size: 1.8rem;
+      }
+    }
+    .check-in-container {
+      .check-in,
+      .check-out,
+      .guest-numbers {
+        padding: 0;
+        text-align: center;
+      }
+      input {
+        width: 80%;
+      }
+    }
+  }
+  .welcome .container {
+    .text-container {
+      width: 100%;
+      padding: 60px;
+
+      .title p:last-child {
+        margin-bottom: 40px;
+      }
+      .content {
+        width: 100%;
+
+        p {
+          line-height: 2.7;
+        }
+      }
+    }
+    .photo {
+      width: 80%;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        height: 60vh;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+  .rooms .container .place-holders {
+    grid-template-columns: 1fr 1fr;
+    .room {
+      .hover p:first-child {
+        font-size: 26px;
+      }
+    }
+  }
+  .services .container {
+    .title .extra-title {
+      text-align: center;
+    }
+  }
+  .testimony .container {
+    .title .extra-title {
+      font-size: 2.8rem;
+    }
+    .boxes .box {
+      width: 100%;
+    }
+    .boxes .box2 {
+      margin-left: 0%;
+      flex-direction: row-reverse;
+    }
+  }
+  .blogs {
+    width: 70%;
+    .container {
+      .title .extra-title {
+        font-size: 2.8rem;
+      }
+      .slider-blog .blogBox .blog-title {
+        text-align: center;
+      }
+      .slider-blog .blogBox .blog-title p {
+        font-size: 20px;
+      }
+    }
+  }
+  .contact .container {
+    .title .extra-title {
+      font-size: 2.8rem;
+    }
+
+    .left-box .header {
+      font-size: 1.1rem;
+    }
+    .right-box {
+      .message .text-area textarea {
+        font-size: 14px;
+      }
+    }
+  }
+}

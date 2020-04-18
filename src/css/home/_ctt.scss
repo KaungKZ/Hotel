@@ -1,0 +1,32 @@
+.click-to-top {
+  pointer-events: none;
+  opacity: 0;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 95%;
+  left: 95%;
+  transform: translate(-95%, -95%);
+  background: #fff;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity 400ms;
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    i {
+      font-size: 1.3rem;
+      color: $primary;
+    }
+  }
+}
+.btn-active {
+  opacity: 1;
+  pointer-events: all;
+}

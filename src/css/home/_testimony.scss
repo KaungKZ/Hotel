@@ -1,0 +1,112 @@
+.testimony {
+  width: 90%;
+  margin: 0 auto 140px auto;
+
+  .container {
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $header;
+      text-transform: capitalize;
+
+      p {
+        color: $primary;
+      }
+
+      p:first-child {
+        padding-bottom: 10px;
+      }
+
+      p:nth-child(2) {
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 10px;
+      }
+      .extra-title {
+        font-size: 50px;
+        font-family: $content;
+        color: $light-header;
+        margin-bottom: 100px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -25%;
+          left: 15%;
+          width: 70%;
+          height: 2px;
+          background: $light-header;
+        }
+      }
+    }
+    .boxes {
+      font-family: $content;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .box {
+        width: 60%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .image {
+          margin: auto;
+          height: 130px;
+          width: 130px;
+
+          img {
+            width: 130px;
+            height: 130px;
+          }
+        }
+
+        .text {
+          width: 70%;
+          height: 85%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          position: relative;
+          border-radius: 15px;
+          color: $light-header;
+          border: 2px solid $secondary;
+
+          .header,
+          .content {
+            font-family: $content;
+            width: 90%;
+            margin-top: -3%;
+          }
+
+          .header {
+            font-weight: 700;
+
+            p:first-child {
+              font-size: 20px;
+              padding: 3px 0;
+            }
+          }
+          .content p::before {
+            content: '"';
+            color: $primary;
+          }
+          .content p::after {
+            content: '"';
+            color: $primary;
+          }
+        }
+      }
+    }
+    .box2 {
+      margin-left: 40%;
+    }
+  }
+}

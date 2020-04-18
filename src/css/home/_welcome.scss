@@ -1,0 +1,69 @@
+.welcome {
+  width: 90%;
+  font-family: $header;
+  margin: 140px auto 140px auto;
+  height: 800px;
+
+  .container {
+    position: relative;
+
+    .text-container {
+      width: 65%;
+      border: 2px solid $primary;
+      height: auto;
+      padding: 60px;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: $primary;
+        }
+        p:first-child {
+          padding-bottom: 10px;
+        }
+        p:last-child {
+          font-size: 30px;
+          font-weight: 700;
+          position: relative;
+          margin-bottom: 70px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -25%;
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            background: $light-header;
+          }
+        }
+      }
+      .content {
+        width: 75%;
+        margin: auto;
+        font-family: $content;
+        color: $light-header;
+        font-size: 20px;
+        text-align: justify;
+
+        p {
+          line-height: 3;
+        }
+      }
+    }
+    .photo {
+      position: absolute;
+      top: 35%;
+      left: 55.5%;
+
+      img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

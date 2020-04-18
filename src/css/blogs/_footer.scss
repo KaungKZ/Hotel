@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  background: $light-header;
+  font-family: $extra;
+  font-weight: 400;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .phone {
+      p:first-child {
+        font-size: 14px;
+      }
+      p:last-child {
+        font-size: 12px;
+      }
+    }
+    .social-media {
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+      .icons a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0 3px;
+      }
+    }
+    .copyright {
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.rooms {
+  width: 100%;
+  font-family: $content;
+  margin-bottom: 140px;
+
+  .container {
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $header;
+
+      p {
+        color: $primary;
+      }
+
+      p:first-child {
+        padding-bottom: 10px;
+      }
+
+      p:last-child {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 70px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -25%;
+          left: 15%;
+          width: 70%;
+          height: 2px;
+          background: $light-header;
+        }
+      }
+    }
+  }
+  .place-holders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+
+    .room {
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+
+      .room-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hover {
+        transform: translateX(100%);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        z-index: 2;
+        transition: opacity 700ms ease-in-out, transform 700ms ease-in,
+          transform 0ms ease-out;
+        opacity: 0;
+        transition-delay: all 300ms;
+
+        p:first-child {
+          font-weight: 700;
+          font-size: 28px;
+        }
+        p:nth-child(2) {
+          font-size: 1.5rem;
+
+          span {
+            color: $primary;
+          }
+        }
+        img {
+          width: 120px;
+        }
+        a {
+          width: 110px;
+          text-decoration: none;
+          background: transparent;
+          color: $light-header;
+          font-size: 1rem;
+          padding: 7px;
+          text-align: center;
+          transition: 400ms;
+          border: 1px solid $primary;
+
+          &:hover {
+            background: $primary;
+            color: #fff;
+            border: 1px solid #fff;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0%;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 35% 50%);
+        z-index: 1;
+        transform: translateX(100%);
+        transition: 400ms;
+        opacity: 0;
+      }
+
+      &:hover:after {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      &:hover .hover {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  .view-all-rooms {
+    text-align: center;
+    margin: 60px auto 0 auto;
+    width: 100%;
+
+    a {
+      width: 110px;
+      text-decoration: none;
+      background: $primary;
+      color: #fff;
+      font-size: 1rem;
+      padding: 8px 36px;
+      text-align: center;
+      transition: 400ms;
+      font-weight: 700;
+
+      &:hover {
+        background: #826900;
+      }
+    }
+  }
+}

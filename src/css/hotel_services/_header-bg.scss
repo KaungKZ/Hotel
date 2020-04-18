@@ -1,0 +1,97 @@
+.header-bg-services {
+  height: 650px;
+
+  .container {
+    width: 100%;
+    height: 430px;
+    position: relative;
+    background-image: url(../assets/services_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+
+    .title {
+      width: 70%;
+      margin: auto;
+      font-family: $extra;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 80px;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      padding-top: 10%;
+
+      p {
+        text-align: center;
+        z-index: 3;
+      }
+    }
+
+    .box-for-services {
+      position: absolute;
+      top: 100%;
+      left: 15%;
+      transform: translateY(-50%);
+      height: 200px;
+      width: 70%;
+      background: $secondary;
+      font-family: $extra;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      z-index: 10;
+
+      .icons {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .icon {
+          cursor: pointer;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: 400ms background;
+
+          svg {
+            width: 70px;
+            height: 70px;
+          }
+          p {
+            color: #fff;
+            text-align: center;
+            font-size: 1rem;
+          }
+          &:hover {
+            background: #fff;
+          }
+          &:hover svg path {
+            fill: $secondary;
+          }
+          &:hover p {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+}

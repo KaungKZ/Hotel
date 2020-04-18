@@ -1,0 +1,94 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  background: $light-header;
+  font-family: $extra;
+  font-weight: 400;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .phone {
+      p:first-child {
+        font-size: 14px;
+      }
+      p:last-child {
+        font-size: 12px;
+      }
+    }
+    .social-media {
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+      .icons a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0 3px;
+      }
+    }
+    .copyright {
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// ================= media queries ==========================
+// small tablet size
+@media (min-width: 481px) and (max-width: 767px) {
+  .header .menu-bar {
+    a {
+      font-size: 14px;
+    }
+    .logo {
+      font-size: 1.3rem;
+    }
+  }
+  .header-bg-services .container {
+    .title {
+      font-size: 70px;
+    }
+    .box-for-services .icons .icon {
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .service-contents {
+    width: 90%;
+    .container .content {
+      .overlap .text-box {
+        p {
+          line-height: 35px;
+          font-size: 14px;
+        }
+      }
+      .overlap-1 .text-box,
+      .overlap-3 .text-box {
+        width: 80%;
+        left: 10%;
+      }
+      .overlap-4 .text-box .left ul,
+      .overlap-4 .text-box .right ul {
+        line-height: 35px;
+
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// base variables and font links
+
+@import "base";
+
+// root styles
+
+@import "root";
+
+// header
+
+@import "./rooms/header";
+
+// header-bg
+
+@import "./rooms/header-bg";
+
+// room details
+
+@import "./rooms/room-details";
+
+// footer
+
+@import "./rooms/footer";
+
+// media-queries
+
+@import "./rooms/media-queries";
